@@ -4,7 +4,7 @@ let set = (githubEnv, circleVal) => {
     }
 };
 
-export default githubActionInCircleCIShim = function(actionName) {
+module.exports = function(actionName) {
     set('HOME', "/github/home");
     set('GITHUB_ACTION', actionName);
     set('GITHUB_ACTOR', process.env.CIRCLE_USERNAME);
