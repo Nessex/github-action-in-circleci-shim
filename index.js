@@ -9,7 +9,6 @@ module.exports = function(actionName) {
     set('GITHUB_ACTION', actionName);
     set('GITHUB_ACTOR', process.env.CIRCLE_USERNAME);
     set('GITHUB_EVENT_NAME', "push");
-    set('GITHUB_EVENT_PATH', "/github/workflow/event.json");
     set('GITHUB_REF', process.env.CIRCLE_BRANCH);
     set('GITHUB_REPOSITORY', process.env.CIRCLE_REPOSITORY_URL);
     set('GITHUB_SHA', process.env.CIRCLE_SHA1);
