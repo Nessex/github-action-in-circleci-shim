@@ -5,7 +5,7 @@ let set = (githubEnv, circleVal) => {
 };
 
 module.exports = function(actionName) {
-    set('HOME', "/github/home");
+    set('HOME', process.env.HOME || '/github/home' );
     set('GITHUB_ACTION', actionName);
     set('GITHUB_ACTOR', process.env.CIRCLE_USERNAME);
     set('GITHUB_EVENT_NAME', "push");
@@ -14,5 +14,5 @@ module.exports = function(actionName) {
     set('GITHUB_SHA', process.env.CIRCLE_SHA1);
     set('GITHUB_TOKEN', process.env.GITHUB_TOKEN);
     set('GITHUB_WORKFLOW', actionName);
-    set('GITHUB_WORKSPACE', "/github/workspace");
+    set('GITHUB_WORKSPACE', process.env.CIRCLE_WORKING_DIRECTORY || '/github/workspace' );
 };
