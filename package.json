@@ -1,6 +1,6 @@
 {
   "name": "github-action-in-circleci-shim",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A shim for when you need to run a GitHub Action in CircleCI, to have more control over API limits.",
   "main": "index.js",
   "scripts": {
